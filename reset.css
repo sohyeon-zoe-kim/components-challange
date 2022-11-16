@@ -77,3 +77,21 @@ fieldset {
   padding: 0;
   border: none;
 }
+
+.back-button {
+  display: flex;
+  gap: 10px;
+  padding: 30px;
+  position: sticky;
+  top: 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+.back-button-home:hover {
+  color: #937DC2;
+  cursor: pointer;
+}
