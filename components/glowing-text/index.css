@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: #000;
+  font-family: 'Oswald', sans-serif;
+}
+
+.glowing-text {
+  width: 100%;
+  height: calc(100vh - 78px);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.glowing-text__letter {
+  color: rgb(33, 33, 33);
+  filter: blur(none);
+  text-shadow: none;
+  font-size: 20rem;
+  transform: color 2s
+}
+
+.glowing-text__letter--blinking {
+  animation: blinking 0.2s forwards;
+}
+
+@keyframes blinking {
+  0%, 100% {
+    color: #FA8072;
+    filter: blur(1px);
+    text-shadow: cyan 0px 0px 100px
+  }
+  10%, 90% {
+    color: rgb(33, 33, 33);
+    filter: blur(none);
+    text-shadow: none;
+  }
+}
