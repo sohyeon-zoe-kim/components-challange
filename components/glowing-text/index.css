@@ -23,7 +23,7 @@ body {
 }
 
 .glowing-text__letter--blinking {
-  animation: blinking 0.2s forwards;
+  animation: 2s linear infinite normal none running blinking;
 }
 
 @keyframes blinking {
