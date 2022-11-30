@@ -92,6 +92,6 @@ fieldset {
 }
 
 .back-button-home:hover {
-  color: #937DC2;
+  opacity: 50%;
   cursor: pointer;
 }

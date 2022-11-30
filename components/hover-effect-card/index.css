@@ -1,0 +1,55 @@
+body {
+  background-color: #FF74B1;
+  overflow: hidden;
+}
+
+.hover-effect-card__img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 30%;
+  left: calc(50% - 50px);
+}
+
+.hover-effect-card__circle {
+  width: 100%;
+  height: calc(100vh - 78px);
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.hover-effect-card__circle:nth-child(2) {
+  background-color: #A7FFE4;
+  clip-path: circle(200px at 50% 50%);
+}
+
+.hover-effect-card__text {
+  font-size: 13rem;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  line-height: calc(100vh - 78px);
+  white-space: nowrap;
+  margin: 0;
+  cursor: default;
+  animation: 8s linear 0s infinite normal none running moveLinier;
+}
+
+.hover-effect-card__text--black {
+  color: #FF577F;
+  -webkit-text-stroke: 4px #fff;
+}
+
+.hover-effect-card__text--white {
+  color: #FFD6EC;
+}
+
+@keyframes moveLinier {
+  0%, 100% {
+    transform: translateX(48%);
+  }
+  50% {
+    transform: translateX(-70%);
+  }
+}
