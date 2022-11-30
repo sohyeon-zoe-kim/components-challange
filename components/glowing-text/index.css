@@ -26,6 +26,18 @@ body {
   animation: 2s linear infinite normal none running blinking;
 }
 
+.glowing-text-speed {
+  position: sticky;
+  bottom: 0;
+  color: #fff;
+  font-size: 3rem;
+  border: 1px solid #fff;
+}
+
+.glowing-text-speed:hover {
+  background-color: #FA8072;
+}
+
 @keyframes blinking {
   0%, 100% {
     color: #FA8072;
