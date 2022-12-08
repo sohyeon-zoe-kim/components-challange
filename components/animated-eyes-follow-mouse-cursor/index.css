@@ -1,0 +1,42 @@
+body {
+  background-color: #497174;
+}
+
+.animated-eyes {
+  width: 100%;
+  height: calc(100vh - 78px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.animated-eyes__eye {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 5px 45px, #497174 0px 0px 15px inset, #497174 0px 0px 25px inset;
+
+  position: relative;
+}
+
+.animated-eyes__eyeball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #497174;
+  left: 10px;
+  top: calc(50% - 25px);
+}
+
+.animated-eyes__inner-eyeball {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 20px;
+  top: calc(50% - 12.5px);
+}
