@@ -78,7 +78,7 @@ fieldset {
   border: none;
 }
 
-.back-button {
+.bread-crumbs {
   display: flex;
   gap: 10px;
   padding: 30px;
@@ -91,7 +91,7 @@ fieldset {
   opacity: 0.8;
 }
 
-.back-button-home:hover {
+.bread-crumbs-home:hover {
   opacity: 50%;
   cursor: pointer;
 }
