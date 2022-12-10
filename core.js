@@ -12,13 +12,13 @@ const addBreadCrumbsEvent = () => {
 
 const createBreadCrumbsElement = () => {
   const root = document.getElementsByClassName('wrap')
-  const backButton = document.createElement('div')
-  const homeButton = document.createElement('p')
-  const cramps = document.createElement('p')
-  const pageTitleButton = document.createElement('p')
+  const backButton = createElement('div')
+  const homeButton = createElement('p')
+  const cramps = createElement('p')
+  const pageTitleButton = createElement('p')
 
-  backButton.setAttribute('class', 'bread-crumbs')
-  homeButton.setAttribute('class', 'bread-crumbs-home')
+  addClassName(backButton, 'bread-crumbs')
+  addClassName(homeButton, 'bread-crumbs-home')
 
   homeButton.innerHTML = 'HOME'
   cramps.innerHTML = '>'
@@ -26,4 +26,12 @@ const createBreadCrumbsElement = () => {
 
   backButton.append(homeButton, cramps, pageTitleButton)
   root[0].insertAdjacentElement('afterbegin', backButton)
+}
+
+const createElement = type => {
+  return document.createElement(type)
+}
+
+const addClassName = (node, className) => {
+  node.setAttribute('class', className)
 }
