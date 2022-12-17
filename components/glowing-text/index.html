@@ -12,18 +12,18 @@
 </head>
 <body>
   <div class="wrap">
-    <div id="text-list" class="glowing-text">
-      <span class="glowing-text__letter">S</span>
-      <span class="glowing-text__letter">O</span>
-      <span class="glowing-text__letter">R</span>
-      <span class="glowing-text__letter">O</span>
-      <span class="glowing-text__letter">G</span>
-      <span class="glowing-text__letter">I</span>
-    </div>
-    <div>
-      <button id="speed-slow" class="glowing-text-speed">Slow</button>
-      <button id="speed-slow" class="glowing-text-speed">Fast</button>
-      <button id="speed-slow" class="glowing-text-speed">Super Fast</button>
+    <div class="glowing-text">
+      <div class="glowing-text-input">
+        <span class="glowing-text-input__label">Set Your Text</span>
+        <input onkeyup="setGlowingText()" class="glowing-text-input__box" />
+        <button type="button" class="glowing-text-input__button">SET!</button>
+      </div>
+      <div id="text-list" class="glowing-text-list"></div>
+      <div class="glowing-text-speed">
+        <button id="speed-slow" class="glowing-text-speed__item">Slow</button>
+        <button id="speed-slow" class="glowing-text-speed__item">Fast</button>
+        <button id="speed-slow" class="glowing-text-speed__item">Super Fast</button>
+      </div>
     </div>
   </div>
 </body>
