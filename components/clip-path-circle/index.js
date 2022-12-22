@@ -9,7 +9,7 @@ function createRollingStones() {
   
   img.style.top = `${randomNumTop}%`
   img.style.left = `${randomNumLeft}%`
-  img.classList.add('hover-effect-card__img')
+  img.classList.add('clip-path-circle__img')
 
   return img
 }

@@ -3,7 +3,7 @@ body {
   overflow: hidden;
 }
 
-.hover-effect-card__img {
+.clip-path-circle__img {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -11,7 +11,7 @@ body {
   left: calc(50% - 50px);
 }
 
-.hover-effect-card__circle {
+.clip-path-circle__circle {
   width: 100%;
   height: calc(100vh - 78px);
   position: absolute;
@@ -19,12 +19,12 @@ body {
   overflow: hidden;
 }
 
-.hover-effect-card__circle:nth-child(2) {
+.clip-path-circle__circle:nth-child(2) {
   background-color: #A7FFE4;
   clip-path: circle(200px at 50% 50%);
 }
 
-.hover-effect-card__text {
+.clip-path-circle__text {
   font-size: 13rem;
   font-weight: bold;
   position: absolute;
@@ -36,12 +36,12 @@ body {
   animation: 8s linear 0s infinite normal none running moveLinier;
 }
 
-.hover-effect-card__text--black {
+.clip-path-circle__text--black {
   color: #FF577F;
   -webkit-text-stroke: 4px #fff;
 }
 
-.hover-effect-card__text--white {
+.clip-path-circle__text--white {
   color: #FFD6EC;
 }
 
