@@ -17,21 +17,9 @@ body {
   background-color: #f5f5f5;
   box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px;
   position: relative;
-  transition: color 0.5s ease-in-out;
+  transition: color 0.5s;
   color: gray;
   overflow: hidden;
-}
-
-.hover-effect-card__item-pink {
-  border-bottom: 5px solid #ff5d5d;
-}
-
-.hover-effect-card__item-yellow {
-  border-bottom: 5px solid yellow;
-}
-
-.hover-effect-card__item-skyblue {
-  border-bottom: 5px solid skyblue;
 }
 
 .hover-effect-card__item:hover {
@@ -46,19 +34,19 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s;
   z-index: 1;
 }
 
-.hover-effect-card__item_pink::before {
+.hover-effect-card__item-pink::before {
   background-color: pink;
 }
 
-.hover-effect-card__item_yellow::before {
-  background-color: yellow;
+.hover-effect-card__item-yellow::before {
+  background-color: yellowgreen;
 }
 
-.hover-effect-card__item_skyblue::before {
+.hover-effect-card__item-skyblue::before {
   background-color: skyblue;
 }
 
