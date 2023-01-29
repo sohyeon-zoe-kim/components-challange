@@ -14,7 +14,19 @@
 
     Array.from(component).forEach(item => {
       item.addEventListener('click', () => {
-        location.href = `./components/${item.innerText.split(' ')[1]}`
+        fetch(`/components/${item.innerText.split(' ')[1]}`)
+          .then(res => {
+            console.log('res', res)
+            if (res.status === 404) {
+              location.href = '/error'
+              return
+            }
+            location.href = `/components/${item.innerText.split(' ')[1]}`
+          })
+          .catch(err => {
+            console.log('err', err)
+            location.href = '/error'
+          })
       })
     })
   }
@@ -50,12 +62,13 @@
   <div class="sohyeon">
     <h1 class="sohyeon-title">✨ 소현이의 우당탕탕 컴포넌트 챌린지 ✨</h1>
     <ul class="sohyeon-components-list">
-      <li class="sohyeon-components-item">1️⃣ custom-scroll (22/11/16)</li>
-      <li class="sohyeon-components-item">2️⃣ glowing-text (22/11/23)</li>
-      <li class="sohyeon-components-item">3️⃣ clip-path-circle (22/11/30)</li>
-      <li class="sohyeon-components-item">4️⃣ animated-eyes-follow-mouse-cursor (22/12/07, 22/12/18)</li>
-      <li class="sohyeon-components-item">5️⃣ hover-effect-card (22/12/22)</li>
-      <li class="sohyeon-components-item">6️⃣ accordion (23/01/04)</li>
+      <li class="sohyeon-components-item">1️⃣ custom-scroll</li>
+      <li class="sohyeon-components-item">2️⃣ glowing-text</li>
+      <li class="sohyeon-components-item">3️⃣ clip-path-circle</li>
+      <li class="sohyeon-components-item">4️⃣ animated-eyes-follow-mouse-cursor</li>
+      <li class="sohyeon-components-item">5️⃣ hover-effect-card</li>
+      <li class="sohyeon-components-item">6️⃣ accordion</li>
+      <li class="sohyeon-components-item">6️⃣ fake-scroll-spy</li>
     </ul>
   </div>
 </body>
