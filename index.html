@@ -15,8 +15,7 @@
     Array.from(component).forEach(item => {
       item.addEventListener('click', () => {
         fetch(`/components/${item.innerText.split(' ')[1]}`)
-          .then(res => {
-            console.log('res', res)
+        .then(res => {
             if (res.status === 404) {
               location.href = '/error'
               return
@@ -24,10 +23,10 @@
             location.href = `/components/${item.innerText.split(' ')[1]}`
           })
           .catch(err => {
-            console.log('err', err)
             location.href = '/error'
           })
       })
+
     })
   }
 </script>
@@ -36,12 +35,16 @@
     width: 100%;
     height: 100%;
     padding: 50px;
-    background-color: #937DC2;
+    background-color: var(--color-primary-tint);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .sohyeon-title {
-    font-size: 3rem;
-    color: #fff;
+    font-size: 5rem;
+    color: var(--color-white);
     margin-bottom: 50px;
     font-weight: 800;
   }
@@ -49,18 +52,26 @@
   .sohyeon-components-item {
     margin: 20px;
     font-size: 2rem;
-    color: #fff;
+    color: var(--color-white);
     font-weight: 600;
+    letter-spacing: 0.1em;
   }
 
   .sohyeon-components-item:hover {
     opacity: 50%;
     cursor: pointer;
   }
+
+  .sohyeon-footer__text {
+    font-size: 1.5rem;
+    color: var(--color-white);
+  }
 </style>
 <body>
   <div class="sohyeon">
-    <h1 class="sohyeon-title">✨ 소현이의 우당탕탕 컴포넌트 챌린지 ✨</h1>
+    <header class="sohyeon-header">
+      <h1 class="sohyeon-title">소현이의 우당탕탕 컴포넌트 챌린지</h1>
+    </header>
     <ul class="sohyeon-components-list">
       <li class="sohyeon-components-item">1️⃣ custom-scroll</li>
       <li class="sohyeon-components-item">2️⃣ glowing-text</li>
@@ -70,6 +81,9 @@
       <li class="sohyeon-components-item">6️⃣ accordion</li>
       <li class="sohyeon-components-item">6️⃣ fake-scroll-spy</li>
     </ul>
+    <footer class="sohyeon-footer">
+      <p class="sohyeon-footer__text">Copyright © Sohyeon Kim. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
