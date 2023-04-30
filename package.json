@@ -6,6 +6,6 @@
   "homepage": "https://sohyeon-zoe-kim.github.io/components-challange/",
   "devDependencies": {
     "gh-pages": "^4.0.0",
-    "serve": "^14.1.2"
+    "serve": "^14.2.0"
   }
 }
