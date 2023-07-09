@@ -1,4 +1,13 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css");
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
 
 .fstvl-bingo {
   font-family: "Pretendard", "-apple-system", "BlinkMacSystemFont", system-ui, "Roboto", "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -82,23 +91,43 @@
 
 .fstvl-bingo-footer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 530px;
   margin-bottom: 200px;
 }
 
-.fstvl-bingo-footer__description {
-  font-size: 2.1rem;
-  font-weight: 400;
-  color: #ffffff;
-  margin-bottom: 10px;
+.fstvl-bingo-footer__series-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
 }
 
-.fstvl-bingo-footer__description-underscore {
-  width: 105%;
+.fstvl-bingo-footer__etc-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.fstvl-bingo-footer__series-button {
+  color: #ff1a42;
   background-color: #ffffff;
-  height: 2px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.fstvl-bingo-footer__submit, .fstvl-bingo-footer__share {
+  color: #ff1a42;
+  background-color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 3px;
 }
 
 .bingo {
@@ -132,8 +161,8 @@
     font-size: 1rem;
   }
 
-  .fstvl-bingo-footer__description {
-    font-size: 1.3rem;
+  .fstvl-bingo-footer {
+    padding: 20px;
   }
 }
 
@@ -162,7 +191,7 @@
     font-size: 1rem;
   }
 
-  .fstvl-bingo-footer__description {
-    font-size: 1.7rem;
+  .fstvl-bingo-footer {
+    padding: 20px;
   }
 }

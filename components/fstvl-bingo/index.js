@@ -1,3 +1,9 @@
+const LINK_LIST = [
+  'https://festival.imweb.me/136', //페스티벌 고어 편
+  'https://festival.imweb.me/137', //페스티벌 고인물 편
+  'https://festival.imweb.me/138', //제출하기
+  'https://festival.imweb.me/126', //페스티벌 매니아 편
+]
 const BINGO_TEXT_LIST = [
   '1년에 페스티벌 최소 3개 이상 간다',
   '티켓을 집에 두고 온 적 있다',
@@ -25,6 +31,8 @@ const BINGO_TEXT_LIST = [
   '1년에 페스티벌 최소 3개 이상 간다',
   '1년에 페스티벌 최소 3개 이상 간다',
 ]
+const footer = document.getElementsByClassName('fstvl-bingo-footer')[0]
+const buttons = footer.querySelectorAll('button')
 
 const createBingoItem = (text, index) => {
   const bingoItem = document.createElement('div')
@@ -50,7 +58,28 @@ const makeBingoBoard = (board) => {
   })
 }
 
+const addLinkToButton = (element, idx) => {
+  element.addEventListener('click', () => {
+    window.location.href = LINK_LIST[idx]
+  })
+}
+
+const copyUrl = (element) => {
+  element.addEventListener('click', (e) => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert('url이 복사되었습니다!🤘🏻🎸');
+    });
+  })
+}
+
 window.onload = function () {
   const bingoBoard = document.getElementsByClassName('fstvl-bingo-board')[0]
   makeBingoBoard(bingoBoard)
+  buttons.forEach((button, idx) => {
+    if (idx === buttons.length - 1) {
+      copyUrl(button)
+      return
+    }
+    addLinkToButton(button, idx)
+  })
 }
